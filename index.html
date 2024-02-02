@@ -19,6 +19,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <!-- Parallax -->
   <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+  <!-- trading view-->
+  <script src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"></script>
+
 </head>
 <body>
     <header>
@@ -49,6 +52,65 @@
                  <img src="img/WhatsApp Image 2024-02-01 at 16.22.39.jpeg" class="d-block w-100 img-fluid" alt="Projetos de e-comerce">
             </div>                    
         </div>
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                
+            "symbols": [
+            {
+                          "description": "",
+                          "proName": "BMFBOVESPA:WIN1!"
+                        },
+                        {
+                          "description": "",
+                          "proName": "BMFBOVESPA:DOL1!"
+                        },
+                        {
+                          "description": "",
+                          "proName": "FX:EURUSD"
+                        },
+                        {
+                          "description": "",
+                          "proName": "FX:GBPUSD"
+                        },
+                        {
+                          "description": "",
+                          "proName": "OANDA:GBPJPY"
+                        },
+                        {
+                          "description": "",
+                          "proName": "BINANCE:BTCUSDT"
+                        },
+                        {
+                          "description": "",
+                          "proName": "BITSTAMP:ETHUSD"
+                        },
+                        {
+                          "description": "",
+                          "proName": "BITSTAMP:BTCUSD"
+                        },
+                        {
+                          "description": "",
+                          "proName": "BMFBOVESPA:IBOV"
+                        },
+                        {
+                          "description": "",
+                          "proName": "TVC:DXY"
+                        }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": true,
+            "displayMode": "regular",
+            "colorTheme": "dark",
+            "locale":"br"
+          }
+            </script>
+          </div> >
+          <div class="tradingview-widget-container">
+            <div id="meuWidget" class="tradingview-widget-container__widget"></div>            
+          </div>
+          
      <!--Noticias -->     
      <div id="notice-area">
         <div class="container">
@@ -56,13 +118,7 @@
             <div class="col-12">
               <h3 class="main-title">Últimas noticias</h3>
             </div>
-            <div class="col-12 text-center">
-                <div class="tradingview-widget-container">
-                    <div class="tradingview-widget-container__widget"></div>
-                    <div class="tradingview-widget-copyright"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
-                </div>
-                  
+            <div class="col-12 text-center">                  
               <iframe src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_employment,_economicActivity,_inflation,_credit,_centralBanks,_confidenceIndex,_balance,_Bonds&importance=1,2,3&countries=32,5&calType=week&timeZone=12&lang=12" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
             </div>
           </div>
@@ -87,11 +143,21 @@
                             <p>E nossos designers trabalharão na sua interface/layout para impulsionar o negócio.</p>
                             <p>Veja outros diferenciais:</p>
                             <ul id="about-list">
-                                <li><i class="fas fa-check"></i> Utilização de Machine Learning</li>
-                                <li><i class="fas fa-check"></i> Layout responsivo para todos os dispositivos</li>
-                                <li><i class="fas fa-check"></i> Integração com diversos sistemas do mercado</li>
-                                <li><i class="fas fa-check"></i> Sistema de pagamento próprio</li>
-                                <li><i class="fas fa-check"></i> Desenvolvilmento com metodologia ágil</li>
+                                <li><i class="fas fa-check"></i> Mini Índice</li>
+                                <li><i class="fas fa-check"></i> Mini Dólar</li>
+                                <li><i class="fas fa-check"></i> Ações</li>
+                                <li><i class="fas fa-check"></i> Forex</li>
+                                <li><i class="fas fa-check"></i> Crypt</li>
+
+                                
+
+
+
+
+
+
+
+
 
                             </ul>                            
                         </div>
@@ -172,7 +238,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="card">
-                            <img src="img/profile1.jpg" class="card-img-top" alt="imagem de Perfil 1">
+                            <img src="" class="card-img-top" alt="imagem de Perfil 1">
                             <div class="card-body">
                                 <h5 class="card-title">Jhon Doe</h5>
                                 <p class="card-text">Software Developer</p>
@@ -182,7 +248,7 @@
                     </div>
                     <div class="col-md-3">                          
                         <div class="card">
-                            <img src="img/profile2.jpg" class="card-img-top" alt="imagem de Perfil 2">
+                            <img src="" class="card-img-top" alt="imagem de Perfil 2">
                             <div class="card-body">
                                 <h5 class="card-title">Maria Mariah</h5>
                                 <p class="card-text">SEO Consultant</p>
@@ -192,7 +258,7 @@
                     </div>
                     <div class="col-md-3">    
                         <div class="card">
-                            <img src="img/profile3.jpg" class="card-img-top" alt="imagem de Perfil 3">
+                            <img src="" class="card-img-top" alt="imagem de Perfil 3">
                             <div class="card-body">
                                 <h5 class="card-title">Paul Baker</h5>
                                 <p class="card-text">Project Manager</p>
@@ -202,7 +268,7 @@
                     </div>
                     <div class="col-md-3">    
                         <div class="card">
-                            <img src="img/profile4.jpg" class="card-img-top" alt="imagem de Perfil 4">
+                            <img src="" class="card-img-top" alt="imagem de Perfil 4">
                             <div class="card-body">
                                 <h5 class="card-title">Karina Katarina</h5>
                                 <p class="card-text">UX/UI Designer</p>
@@ -243,22 +309,22 @@
                             <button class="main-btn filter-btn" id="seo-btn">SEO</button>
                         </div>
                         <div class="col-md-4 project-box dev">
-                            <img src="img/proj1.jpg" class="img-fluid" alt="Projeto 1">
+                            <img src="" class="img-fluid" alt="Projeto 1">
                           </div>
                           <div class="col-md-4 project-box dsg">
-                            <img src="img/proj2.jpg" class="img-fluid" alt="Projeto 2">
+                            <img src="" class="img-fluid" alt="Projeto 2">
                           </div>
                           <div class="col-md-4 project-box seo">
-                            <img src="img/proj3.jpg" class="img-fluid" alt="Projeto 3">
+                            <img src="" class="img-fluid" alt="Projeto 3">
                           </div>
                           <div class="col-md-4 project-box dev">
-                            <img src="img/proj4.jpg" class="img-fluid" alt="Projeto 4">
+                            <img src="" class="img-fluid" alt="Projeto 4">
                           </div>
                           <div class="col-md-4 project-box dsg">
-                            <img src="img/proj5.jpg" class="img-fluid" alt="Projeto 5">
+                            <img src="" class="img-fluid" alt="Projeto 5">
                           </div>
                           <div class="col-md-4 project-box seo">
-                            <img src="img/proj6.jpg" class="img-fluid" alt="Projeto 6">
+                            <img src="" class="img-fluid" alt="Projeto 6">
                           </div>
                     </div>
                 </div>
@@ -333,7 +399,6 @@
         </div>
       </footer>
       <!--Scripts do projeto-->
-    <script src="js/ativos.js"></script>
-    <script src="js/script.js"></script>    
+      <script src="js/script.js"></script>    
 </body>
 </html>
