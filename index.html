@@ -44,9 +44,9 @@
       </div>  
     </header>
     <main>
-        <div class="container-fluid">
+        <div id="banner" class="container-fluid">
             <div>
-                 <img src="img/banner.jpeg" class="d-block w-100 img-fluid" alt="Projetos de e-comerce">
+                 <img src="img/WhatsApp Image 2024-02-01 at 16.22.39.jpeg" class="d-block w-100 img-fluid" alt="Projetos de e-comerce">
             </div>                    
         </div>
      <!--Noticias -->     
@@ -57,6 +57,12 @@
               <h3 class="main-title">Últimas noticias</h3>
             </div>
             <div class="col-12 text-center">
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async></script>
+                </div>
+                  
               <iframe src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_employment,_economicActivity,_inflation,_credit,_centralBanks,_confidenceIndex,_balance,_Bonds&importance=1,2,3&countries=32,5&calType=week&timeZone=12&lang=12" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
             </div>
           </div>
@@ -327,6 +333,7 @@
         </div>
       </footer>
       <!--Scripts do projeto-->
+    <script src="js/ativos.js"></script>
     <script src="js/script.js"></script>    
 </body>
 </html>
