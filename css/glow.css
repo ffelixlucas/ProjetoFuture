@@ -22,6 +22,7 @@
   height: 440px; /* Ajustar para a altura do iframe */
   transform: translate(-50%, -50%);
   z-index: 1;
+  display: none;
 }
 
 .glow::before, .glow::after {
