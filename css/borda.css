@@ -1,0 +1,43 @@
+  
+  .caixa {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .caixa img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .caixa::before, .caixa::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background: linear-gradient(45deg, #186f54, #000, #FF79C6, #0000, #186f54,  #000, #FF79C6, #0000);
+
+    background-size: 300%;
+    border-radius: 50%;
+    animation:AnimarBorda 8s cubic-bezier(0.55, 0.06, 0.68, 0.19) alternate infinite;
+  }
+  @keyframes AnimarBorda {
+    0% {
+        background-position:  0;
+    }
+    100%{
+        background-position: 300%;
+
+    }
+    
+  }
+
+  .caixa::after{
+    filter: blur(50px);
+  }

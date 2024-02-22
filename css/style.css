@@ -24,11 +24,6 @@ p,li {
   padding-bottom: 0;
 }
 
-#logo {
-  width: 75px;
-  border-radius: 50%;
- 
-}
 
 .navbar-brand {
   padding: 0;
@@ -105,7 +100,7 @@ p,li {
   100% {
       opacity: 1;
   }
-}*/
+}
 
 #notice-area {
   position: relative;
@@ -117,42 +112,8 @@ p,li {
 #notice-area {
   position: relative;
 }
+*/
 
-.luz-container {
-  position: relative;
-}
-
-iframe {
-  width: 650px;
-  height: 467px;
-  position: relative;
-  z-index: 1;
-}
-
-.luz-piscante {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%; /* Ajuste o tamanho conforme necessário */
-  height: 180%; /* Ajuste o tamanho conforme necessário */
-  background: radial-gradient(circle, rgba(255, 121, 198, 0.8) 0%, rgba(255, 121, 198, 0.5) 20%, rgba(255, 121, 198, 0.3) 40%, rgba(255, 121, 198, 0.2) 60%, rgba(255, 121, 198, 0.1) 80%, transparent 90%, transparent 100%);  animation: piscar 3s infinite alternate;
-  mix-blend-mode: overlay;
-  z-index: 0;
-  border-radius: 50%;
-}
-
-@keyframes piscar {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
-}
 
 
 /* Sobre a empresa */
@@ -632,11 +593,6 @@ iframe {
     position: relative;
   }
 
-  iframe {
-    width: 100%; /* Define a largura como 100% para mobile */
-    height: 467px;
-
-  }
   .luz-piscante {
     position: absolute;
     top: 50%;

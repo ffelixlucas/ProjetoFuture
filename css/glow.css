@@ -1,0 +1,62 @@
+/* Estilos do container */
+.neon-container {
+  display: flex;
+  justify-content: center;
+  position: relative; /* Required for pseudo-element positioning */
+}
+
+/* Estilos do iframe */
+.neon iframe {
+  width: 650px;
+  height: 467px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Caixa de efeito luminoso */
+.glow {
+  position: absolute;
+  top: 50%; /* Ajustar para coincidir com o topo do iframe */
+  left: 50%; /* Ajustar para coincidir com a esquerda do iframe */
+  width: 560px; /* Ajustar para a largura do iframe */
+  height: 440px; /* Ajustar para a altura do iframe */
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.glow::before, .glow::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  background: linear-gradient(45deg, #186f54, #000, #FF79C6, #0000, #186f54,  #000, #FF79C6, #0000);
+  background-size: 300%;
+  border-radius: 50%;
+  animation: AnimarBorda 8s cubic-bezier(0.25, 0.1, 0.25, 1) alternate infinite;
+}
+
+@keyframes AnimarBorda {
+  0% {
+    background-position:  0;
+  }
+  100%{
+    background-position: 300%;
+  }
+}
+
+.glow::after{
+  filter: blur(50px);
+}
+
+
+/* Media query adicional para telas muito pequenas (até 430px) */
+@media (max-width: 430px) {
+  .neon iframe {
+    width: 100%; /* Mantém a largura como 100% para telas muito pequenas */
+  }
+  
+  .glow {
+    width: 59%; /* Ajustar para a largura do iframe em telas pequenas */
+  }
+}
