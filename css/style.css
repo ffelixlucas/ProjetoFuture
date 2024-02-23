@@ -547,52 +547,12 @@ p,li {
     width: 100%;
     height: 100%;
   }
-  /* slider 
-    #mainSlider {
-      margin-top: 90px;
-    }
-  
-    #mainSlider .carousel-caption {
-      top: 5%;
-    }
-  
-    #mainSlider .carousel-caption h2 {
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
-  
-    #mainSlider .carousel-caption p {
-      display: none;
-    }
-  
-    .carousel-caption .main-btn {
-      
-      font-size: 14px;
-    }
-
-    
-*/
+ 
   #notice-area {
     position: relative;
 
   }
-  .luz-container{
-    position: relative;
-  }
-
-  .luz-piscante {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 130%; /* Ajuste o tamanho conforme necessário */
-    height: 130%; /* Ajuste o tamanho conforme necessário */
-    background: radial-gradient(circle, rgba(255, 121, 198, 1) 0%, rgba(255, 121, 198, 0.8) 20%, rgba(255, 121, 198, 0.6) 40%, rgba(255, 121, 198, 0.4) 60%, rgba(255, 121, 198, 0.2) 80%, transparent 90%, transparent 100%);
-    mix-blend-mode: overlay;
-    z-index: 0;
-    border-radius: 50%;
-  }
-  
+   
   @keyframes piscar {
     0% {
       opacity: 0.1;
@@ -608,6 +568,20 @@ p,li {
   /* about */
   .main-title {
     font-size: 29px;
+  }
+  .main-title.fundo::before {
+    content: "";
+    background-image: url('/img/graficofundo.svg');
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
   }
 
   #about-area img {
@@ -675,4 +649,23 @@ p,li {
     border: none;
     margin-bottom: 0;
   }
+}
+.whatsapp-button {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 0;
+  position: fixed; /* Fixa a posição do botão */
+  bottom: 20px; /* Distância do botão para a parte inferior da página */
+  right: 20px; /* Distância do botão para a parte direita da página */
+}
+.whatsapp-button:before {
+  content: url('img/whatsapp-ico.png');
 }

@@ -198,3 +198,8 @@ $( document ).ready(function() {
 
 
 });
+
+document.querySelector('.whatsapp-button').addEventListener('click', function(e) {
+  e.preventDefault();
+  window.open(this.href, 'WhatsApp', 'width=600,height=700');
+});
