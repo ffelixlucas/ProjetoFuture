@@ -77,74 +77,52 @@ p,li {
   height: auto;
   display: block;
 }
-
-
-
-/* Noticias 
-
-#notice-area iframe {
-  width: 650px; /* Define a largura como 100% para mobile 
-  height: 467px;
-}
-.luz-piscante {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, transparent 20%, #372F79 50%, transparent 90%);
-  animation: piscar 1s infinite alternate;
-}
-@keyframes piscar {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-
-#notice-area {
-  position: relative;
-  
-}
-
-
-
-#notice-area {
-  position: relative;
-}
-*/
-
-
-
-/* Sobre a empresa */
-
 #about-area {
   border: red;
 }
-
 .main-title {
-  color: #FF79C6;
-  margin: 0 0 65px 0;
+  display:block;
+  height: 110px;
+  color: #fff;
+  margin: 0 0 70px 0;
   font-size: 40px;
   text-align: center;
+  padding-top: 20px; /* Ajuste esse valor conforme necessário */
+  position: relative; /* Adicione isso para posicionar o pseudo-elemento */
+  z-index: 1;
 }
 
-.main-title::after {
+.main-title.fundo::before {
   content: "";
-  border-top: 2px solid rgb(51, 51, 51);
-  width: 26%;
+  background-image: url('/img/graficofundo.svg');
+  background-size: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3; 
   position: absolute;
-  top: 52px;
-  left: 36.5%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
+
+.main-title.fundo {
+  background: none; /* Remova a imagem de fundo aqui */
+}
+  
+
+
+
 
 .about-title {
   font-size: 17px;
-  color: #444;
+  color: #FF79C6;
   text-transform: uppercase;
   font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 #about-list {
@@ -160,6 +138,13 @@ p,li {
   color: #186f54;
   margin-right: 15px;
 }
+.emoji {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
 
 /* Serviços */
 

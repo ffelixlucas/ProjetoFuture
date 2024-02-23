@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://wa.me/5541988919440" target="_blank" class="whatsapp-button">WhatsApp</a>
+
+    <script>
+        document.querySelector('.whatsapp-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open(this.href, 'WhatsApp', 'width=600,height=700');
+        });
+    </script>
+</body>
+</html>

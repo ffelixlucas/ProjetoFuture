@@ -1,39 +1,80 @@
-#notice-area {
-  position: relative;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+@property --d{
+  syntax:  '<angle>';
+  inherits: true;
+  initial-value: 0deg ;
 }
-
-.luz-container {
+button {
+  width: 200px;
+  aspect-ratio: 1;
+  font-size: 30px;
+  color: #fff;
+  background: none;
+  border: none;
+  border-radius: 20px;
   position: relative;
-}
-
-iframe {
-  width: 650px;
-  height: 467px;
-  position: relative;
-  z-index: 1;
-}
-
-.luz-piscante {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%; /* Ajuste o tamanho conforme necessário */
-  height: 180%; /* Ajuste o tamanho conforme necessário */
-  background: radial-gradient(circle, rgba(255, 121, 198, 0.8) 0%, rgba(255, 121, 198, 0.5) 20%, rgba(255, 121, 198, 0.3) 40%, rgba(255, 121, 198, 0.2) 60%, rgba(255, 121, 198, 0.1) 80%, transparent 90%, transparent 100%);  animation: piscar 3s infinite alternate;
-  mix-blend-mode: overlay;
   z-index: 0;
-  border-radius: 50%;
+  transition: .3s;
+  cursor: pointer;
 }
 
-@keyframes piscar {
-  0% {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.1;
-  }
+button::before{
+  content: "";
+  position: absolute;
+  inset: -8px;
+  padding: 8px;
+  border-radius: 28px;
+  background: conic-gradient(from var(--d, 0deg),
+  #21D4FD,
+  #000 30deg 120deg,
+  #B721ff 150deg 300deg,
+  #0000 210deg 300deg
+  #21D4FD 330deg);
+  -webkit-mask: radial-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite:intersect
 }
+button::after{
+  content: "";
+  position: absolute;
+  inset: -100px;
+  background: radial-gradient(80px at left 150px top 120px, #21D4FD 98%, #0000), radial-gradient(80px at right 150px bottom 120px, #B721ff 98%, #0000);
+  filter: blur(60px);
+  opacity: .5;
+  }
+  button::before, button::after{
+    transition: .5s, 99999s 99999s transform, 99999s 99999s --d;
+  }
+  button:hover{
+    box-shadow: 0 0 1px #666;
+    }
+  button:hover:after{
+    --d:  rotate(3600deg);
+    transition: .5s, 60s linear --d;
+  }
+  button:hover:before{
+    background-color: #222;
+  }
+  body{
+    margin: 0;
+    min-height: 110vh;
+    display: grid;
+    place-content: center;
+    grid-auto-flow: column;
+    background-color: #1b1b1c;
+
+
+  }
+</style>
+
+<body>
+    <button> Hover me </button>
+</body>
+</html>
