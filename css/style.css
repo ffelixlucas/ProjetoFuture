@@ -94,7 +94,7 @@ p,li {
 
 .main-title.fundo::before {
   content: "";
-  background-image: url('/img/graficofundo.svg');
+  background-image: url('../img/graficofundo.svg');
   background-size: 450px;
   background-repeat: no-repeat;
   background-position: center;
