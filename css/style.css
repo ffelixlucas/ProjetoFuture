@@ -652,20 +652,12 @@ p,li {
 }
 .whatsapp-button {
   display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 10px;
-  border-radius: 50%;
-  text-decoration: none;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  font-size: 0;
+  width: 70px;
+  height: 40px;
   position: fixed; /* Fixa a posição do botão */
   bottom: 20px; /* Distância do botão para a parte inferior da página */
   right: 20px; /* Distância do botão para a parte direita da página */
 }
 .whatsapp-button:before {
-  content: url('img/whatsapp-ico.png');
+  content: url('/img/whatsapp-ico.png');
 }
